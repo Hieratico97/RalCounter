@@ -1401,6 +1401,7 @@ color background_material_dark
 color background_material_light
 color bg_creature
 color bg_planeswalker
+color black
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -3277,6 +3278,8 @@ id btnLangEn
 id btnLangEs
 id btnLifeMinus
 id btnLifePlus
+id btnLoyaltyMinus
+id btnLoyaltyPlus
 id btnMinusEight
 id btnMinusTwo
 id btnNewGame
@@ -3426,6 +3429,7 @@ id jumpToEnd
 id jumpToStart
 id labeled
 id layout
+id layoutTransform
 id left
 id leftToRight
 id legacy
@@ -3568,6 +3572,7 @@ id rightToLeft
 id right_icon
 id right_side
 id root
+id rootFrame
 id rounded
 id row_index_key
 id rtl
@@ -3696,7 +3701,6 @@ id tvLifeTotal
 id tvLossCount
 id tvLoyalty
 id tvRedCount
-id tvSelfDamage
 id tvStormCount
 id tvTimestamp
 id tvTotalFlips

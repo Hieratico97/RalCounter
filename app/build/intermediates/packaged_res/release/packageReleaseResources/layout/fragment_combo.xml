@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/root"
+    android:id="@+id/rootFrame"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_creature"
-    android:fillViewport="true">
+    android:background="@color/bg_creature">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,6 +23,175 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:visibility="invisible" />
+
+        <!-- ═══════════════════════════════════════════
+             LIFE TOTAL
+        ═══════════════════════════════════════════ -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            app:cardBackgroundColor="#2A0505"
+            app:cardCornerRadius="14dp"
+            app:strokeColor="@color/izzet_red"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="8dp"
+                android:paddingHorizontal="24dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/life_total_label"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.05"
+                    android:textAllCaps="true" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnLifeMinus"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:text="−"
+                    android:textSize="36sp"
+                    android:padding="0dp"
+                    app:backgroundTint="@color/izzet_red"
+                    app:cornerRadius="34dp" />
+
+                <TextView
+                    android:id="@+id/tvLifeTotal"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="40"
+                    android:textColor="@color/white"
+                    android:textSize="92sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:lineSpacingMultiplier="0.9" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnLifePlus"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:text="+"
+                    android:textSize="36sp"
+                    android:padding="0dp"
+                    app:backgroundTint="@color/izzet_red"
+                    app:cornerRadius="34dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ═══════════════════════════════════════════
+             MANA POOL (integrated in same tab)
+        ═══════════════════════════════════════════ -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="@color/planeswalker_card_bg"
+            app:cardCornerRadius="14dp"
+            app:strokeColor="@color/lightning_cyan"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+                    
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true"
+                        android:text="@string/mana_pool_label"
+                        android:textColor="@color/lightning_cyan"
+                        android:textSize="11sp"
+                        android:textAllCaps="true"
+                        android:letterSpacing="0.1" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mana_total_label"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="11sp"
+                            android:layout_marginEnd="6dp" />
+
+                        <TextView
+                            android:id="@+id/tvTotalMana"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/gold_bright"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <!-- 3 Columns for compact Mana UI -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false">
+
+                    <!-- Blue -->
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                        <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/ic_mana_blue" />
+                        <TextView android:id="@+id/tvBlueCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textColor="@color/white" android:textSize="32sp" android:textStyle="bold" android:layout_marginVertical="4dp" />
+                        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
+                            <com.google.android.material.button.MaterialButton android:id="@+id/btnBlueMinus" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="56dp" android:layout_height="56dp" android:text="−" android:textSize="26sp" android:padding="0dp" app:backgroundTint="@color/mana_blue" app:cornerRadius="28dp" />
+                            <View android:layout_width="4dp" android:layout_height="1dp" />
+                            <com.google.android.material.button.MaterialButton android:id="@+id/btnBluePlus" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="56dp" android:layout_height="56dp" android:text="+" android:textSize="26sp" android:padding="0dp" app:backgroundTint="@color/mana_blue" app:cornerRadius="28dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Red -->
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                        <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/ic_mana_red" />
+                        <TextView android:id="@+id/tvRedCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textColor="@color/white" android:textSize="32sp" android:textStyle="bold" android:layout_marginVertical="4dp" />
+                        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
+                            <com.google.android.material.button.MaterialButton android:id="@+id/btnRedMinus" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="56dp" android:layout_height="56dp" android:text="−" android:textSize="26sp" android:padding="0dp" app:backgroundTint="@color/mana_red" app:cornerRadius="28dp" />
+                            <View android:layout_width="4dp" android:layout_height="1dp" />
+                            <com.google.android.material.button.MaterialButton android:id="@+id/btnRedPlus" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="56dp" android:layout_height="56dp" android:text="+" android:textSize="26sp" android:padding="0dp" app:backgroundTint="@color/mana_red" app:cornerRadius="28dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Generic -->
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                        <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/ic_mana_generic" />
+                        <TextView android:id="@+id/tvGenericCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textColor="@color/white" android:textSize="32sp" android:textStyle="bold" android:layout_marginVertical="4dp" />
+                        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
+                            <com.google.android.material.button.MaterialButton android:id="@+id/btnGenericMinus" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="56dp" android:layout_height="56dp" android:text="−" android:textSize="26sp" android:padding="0dp" app:backgroundTint="@color/mana_generic" app:cornerRadius="28dp" />
+                            <View android:layout_width="4dp" android:layout_height="1dp" />
+                            <com.google.android.material.button.MaterialButton android:id="@+id/btnGenericPlus" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="56dp" android:layout_height="56dp" android:text="+" android:textSize="26sp" android:padding="0dp" app:backgroundTint="@color/mana_generic" app:cornerRadius="28dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
 
         <!-- ═══════════════════════════════════════════
@@ -227,63 +400,68 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="14dp">
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="12dp">
 
-                    <TextView
-                        android:id="@+id/tvFlipResult"
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvFlipResult"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="⚡ ¡CARA!"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/win_color" />
+
+                        <TextView
+                            android:id="@+id/tvFlipSubtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/flip_win_sub"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutTransform"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="⚡ ¡CARA!"
-                        android:textSize="22sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/win_color" />
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginStart="12dp"
+                        android:visibility="gone">
 
-                    <TextView
-                        android:id="@+id/tvFlipSubtitle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/flip_win_sub"
-                        android:textColor="@color/text_secondary"
-                        android:textSize="13sp" />
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnTransform"
-                        android:layout_width="match_parent"
-                        android:layout_height="48dp"
-                        android:layout_marginTop="10dp"
-                        android:text="@string/transform_ral"
-                        android:visibility="gone"
-                        app:backgroundTint="@color/lightning_cyan"
-                        app:cornerRadius="10dp" />
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnTransform"
+                            style="@style/Widget.Material3.Button.TonalButton"
+                            android:layout_width="72dp"
+                            android:layout_height="72dp"
+                            android:padding="2dp"
+                            android:insetLeft="0dp"
+                            android:insetTop="0dp"
+                            android:insetRight="0dp"
+                            android:insetBottom="0dp"
+                            android:text="TRANSFORM!"
+                            android:textSize="8sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            app:backgroundTint="@color/lightning_cyan"
+                            app:cornerRadius="12dp"
+                            app:icon="@drawable/ic_flip_arrow"
+                            app:iconGravity="textTop"
+                            app:iconPadding="0dp"
+                            app:iconSize="28dp"
+                            app:iconTint="@color/black" />
+                    </LinearLayout>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Self-damage display -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:layout_marginTop="6dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/self_damage_label"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="13sp" />
-
-                <TextView
-                    android:id="@+id/tvSelfDamage"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="6dp"
-                    android:text="0"
-                    android:textColor="@color/lose_color"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
 
         </LinearLayout>
 
@@ -330,15 +508,46 @@
                             android:textAllCaps="true"
                             android:letterSpacing="0.1" />
 
-                        <TextView
-                            android:id="@+id/tvLoyalty"
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="2"
-                            android:textColor="@color/white"
-                            android:textSize="56sp"
-                            android:textStyle="bold"
-                            android:lineSpacingMultiplier="0.85" />
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="4dp">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnLoyaltyMinus"
+                                style="@style/Widget.Material3.Button.TonalButton"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:text="−"
+                                android:textSize="24sp"
+                                android:padding="0dp"
+                                app:backgroundTint="@color/mana_red"
+                                app:cornerRadius="24dp" />
+
+                            <TextView
+                                android:id="@+id/tvLoyalty"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:text="2"
+                                android:textColor="@color/white"
+                                android:textSize="56sp"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:lineSpacingMultiplier="0.85" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnLoyaltyPlus"
+                                style="@style/Widget.Material3.Button.TonalButton"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:text="+"
+                                android:textSize="24sp"
+                                android:padding="0dp"
+                                app:backgroundTint="@color/mana_blue"
+                                app:cornerRadius="24dp" />
+                        </LinearLayout>
                     </LinearLayout>
 
                     <!-- Flip back button -->
@@ -440,169 +649,6 @@
         </com.google.android.material.card.MaterialCardView>
 
         <!-- ═══════════════════════════════════════════
-             LIFE TOTAL
-        ═══════════════════════════════════════════ -->
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="6dp"
-            app:cardBackgroundColor="#2A0505"
-            app:cardCornerRadius="14dp"
-            app:strokeColor="@color/izzet_red"
-            app:strokeWidth="1dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingVertical="8dp"
-                android:paddingHorizontal="24dp"
-                android:gravity="center_vertical">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/life_total_label"
-                    android:textColor="@color/white"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    android:letterSpacing="0.05"
-                    android:textAllCaps="true" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnLifeMinus"
-                    style="@style/Widget.Material3.Button.TonalButton"
-                    android:layout_width="56dp"
-                    android:layout_height="56dp"
-                    android:text="−"
-                    android:textSize="28sp"
-                    android:padding="0dp"
-                    app:backgroundTint="@color/izzet_red"
-                    app:cornerRadius="28dp" />
-
-                <TextView
-                    android:id="@+id/tvLifeTotal"
-                    android:layout_width="90dp"
-                    android:layout_height="wrap_content"
-                    android:text="40"
-                    android:textColor="@color/white"
-                    android:textSize="72sp"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:lineSpacingMultiplier="0.9" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnLifePlus"
-                    style="@style/Widget.Material3.Button.TonalButton"
-                    android:layout_width="56dp"
-                    android:layout_height="56dp"
-                    android:text="+"
-                    android:textSize="28sp"
-                    android:padding="0dp"
-                    app:backgroundTint="@color/izzet_red"
-                    app:cornerRadius="28dp" />
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-        <!-- ═══════════════════════════════════════════
-             MANA POOL (integrated in same tab)
-        ═══════════════════════════════════════════ -->
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            app:cardBackgroundColor="@color/planeswalker_card_bg"
-            app:cardCornerRadius="14dp"
-            app:strokeColor="@color/lightning_cyan"
-            app:strokeWidth="1dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="12dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:layout_marginBottom="10dp">
-                    
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:text="@string/mana_pool_label"
-                        android:textColor="@color/lightning_cyan"
-                        android:textSize="11sp"
-                        android:textAllCaps="true"
-                        android:letterSpacing="0.1" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/mana_total_label"
-                        android:textColor="@color/text_secondary"
-                        android:textSize="11sp" />
-
-                    <TextView
-                        android:id="@+id/tvTotalMana"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="0"
-                        android:textColor="@color/gold_bright"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:layout_marginEnd="8dp" />
-
-                </LinearLayout>
-
-                <!-- 3 Columns for compact Mana UI -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:baselineAligned="false">
-
-                    <!-- Blue -->
-                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
-                        <ImageView android:layout_width="28dp" android:layout_height="28dp" android:src="@drawable/ic_mana_blue" />
-                        <TextView android:id="@+id/tvBlueCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textColor="@color/white" android:textSize="24sp" android:textStyle="bold" android:layout_marginVertical="4dp" />
-                        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
-                            <com.google.android.material.button.MaterialButton android:id="@+id/btnBlueMinus" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="46dp" android:layout_height="46dp" android:text="−" android:textSize="20sp" android:padding="0dp" app:backgroundTint="@color/mana_blue" app:cornerRadius="23dp" />
-                            <View android:layout_width="4dp" android:layout_height="1dp" />
-                            <com.google.android.material.button.MaterialButton android:id="@+id/btnBluePlus" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="46dp" android:layout_height="46dp" android:text="+" android:textSize="20sp" android:padding="0dp" app:backgroundTint="@color/mana_blue" app:cornerRadius="23dp" />
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <!-- Red -->
-                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
-                        <ImageView android:layout_width="28dp" android:layout_height="28dp" android:src="@drawable/ic_mana_red" />
-                        <TextView android:id="@+id/tvRedCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textColor="@color/white" android:textSize="24sp" android:textStyle="bold" android:layout_marginVertical="4dp" />
-                        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
-                            <com.google.android.material.button.MaterialButton android:id="@+id/btnRedMinus" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="46dp" android:layout_height="46dp" android:text="−" android:textSize="20sp" android:padding="0dp" app:backgroundTint="@color/mana_red" app:cornerRadius="23dp" />
-                            <View android:layout_width="4dp" android:layout_height="1dp" />
-                            <com.google.android.material.button.MaterialButton android:id="@+id/btnRedPlus" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="46dp" android:layout_height="46dp" android:text="+" android:textSize="20sp" android:padding="0dp" app:backgroundTint="@color/mana_red" app:cornerRadius="23dp" />
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <!-- Generic -->
-                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
-                        <ImageView android:layout_width="28dp" android:layout_height="28dp" android:src="@drawable/ic_mana_generic" />
-                        <TextView android:id="@+id/tvGenericCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textColor="@color/white" android:textSize="24sp" android:textStyle="bold" android:layout_marginVertical="4dp" />
-                        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
-                            <com.google.android.material.button.MaterialButton android:id="@+id/btnGenericMinus" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="46dp" android:layout_height="46dp" android:text="−" android:textSize="20sp" android:padding="0dp" app:backgroundTint="@color/mana_generic" app:cornerRadius="23dp" />
-                            <View android:layout_width="4dp" android:layout_height="1dp" />
-                            <com.google.android.material.button.MaterialButton android:id="@+id/btnGenericPlus" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="46dp" android:layout_height="46dp" android:text="+" android:textSize="20sp" android:padding="0dp" app:backgroundTint="@color/mana_generic" app:cornerRadius="23dp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-        <!-- ═══════════════════════════════════════════
              ACTION BUTTONS
         ═══════════════════════════════════════════ -->
         <LinearLayout
@@ -641,4 +687,5 @@
             android:letterSpacing="0.1" />
 
     </LinearLayout>
-</ScrollView>
+    </ScrollView>
+</FrameLayout>

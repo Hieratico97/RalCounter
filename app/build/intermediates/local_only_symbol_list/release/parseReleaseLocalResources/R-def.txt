@@ -2,6 +2,7 @@ R_DEF: Internal format may change without notice
 local
 color bg_creature
 color bg_planeswalker
+color black
 color creature_card_bg
 color gold
 color gold_bright
@@ -58,6 +59,8 @@ id btnLangEn
 id btnLangEs
 id btnLifeMinus
 id btnLifePlus
+id btnLoyaltyMinus
+id btnLoyaltyPlus
 id btnMinusEight
 id btnMinusTwo
 id btnNewGame
@@ -73,11 +76,13 @@ id cardFlipResult
 id comboFragment
 id container
 id flipLogFragment
+id layoutTransform
 id navView
 id nav_graph
 id nav_host_fragment
 id recyclerFlips
 id root
+id rootFrame
 id sectionCreature
 id sectionPlaneswalker
 id setupFragment
@@ -94,7 +99,6 @@ id tvLifeTotal
 id tvLossCount
 id tvLoyalty
 id tvRedCount
-id tvSelfDamage
 id tvStormCount
 id tvTimestamp
 id tvTotalFlips

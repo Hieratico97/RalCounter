@@ -2,6 +2,7 @@
 <resources>
     <color name="bg_creature">#110500</color>
     <color name="bg_planeswalker">#000D1E</color>
+    <color name="black">#000000</color>
     <color name="creature_card_bg">#1A0A00</color>
     <color name="gold">#D4A017</color>
     <color name="gold_bright">#FFD700</color>

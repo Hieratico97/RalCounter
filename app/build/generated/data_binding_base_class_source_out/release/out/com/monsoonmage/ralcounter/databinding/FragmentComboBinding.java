@@ -4,8 +4,8 @@ package com.monsoonmage.ralcounter.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,7 +20,7 @@ import java.lang.String;
 
 public final class FragmentComboBinding implements ViewBinding {
   @NonNull
-  private final ScrollView rootView;
+  private final FrameLayout rootView;
 
   @NonNull
   public final MaterialButton btnBlueMinus;
@@ -51,6 +51,12 @@ public final class FragmentComboBinding implements ViewBinding {
 
   @NonNull
   public final MaterialButton btnLifePlus;
+
+  @NonNull
+  public final MaterialButton btnLoyaltyMinus;
+
+  @NonNull
+  public final MaterialButton btnLoyaltyPlus;
 
   @NonNull
   public final MaterialButton btnMinusEight;
@@ -86,7 +92,10 @@ public final class FragmentComboBinding implements ViewBinding {
   public final MaterialCardView cardFlipResult;
 
   @NonNull
-  public final ScrollView root;
+  public final LinearLayout layoutTransform;
+
+  @NonNull
+  public final FrameLayout rootFrame;
 
   @NonNull
   public final LinearLayout sectionCreature;
@@ -119,32 +128,29 @@ public final class FragmentComboBinding implements ViewBinding {
   public final TextView tvRedCount;
 
   @NonNull
-  public final TextView tvSelfDamage;
-
-  @NonNull
   public final TextView tvStormCount;
 
   @NonNull
   public final TextView tvTotalMana;
 
-  private FragmentComboBinding(@NonNull ScrollView rootView, @NonNull MaterialButton btnBlueMinus,
+  private FragmentComboBinding(@NonNull FrameLayout rootView, @NonNull MaterialButton btnBlueMinus,
       @NonNull MaterialButton btnBluePlus, @NonNull MaterialButton btnCastSpell,
       @NonNull MaterialButton btnFlipBack, @NonNull MaterialButton btnGenericMinus,
       @NonNull MaterialButton btnGenericPlus, @NonNull MaterialButton btnInstSorcMinus,
       @NonNull MaterialButton btnInstSorcPlus, @NonNull MaterialButton btnLifeMinus,
-      @NonNull MaterialButton btnLifePlus, @NonNull MaterialButton btnMinusEight,
+      @NonNull MaterialButton btnLifePlus, @NonNull MaterialButton btnLoyaltyMinus,
+      @NonNull MaterialButton btnLoyaltyPlus, @NonNull MaterialButton btnMinusEight,
       @NonNull MaterialButton btnMinusTwo, @NonNull MaterialButton btnNewGame,
       @NonNull MaterialButton btnNewTurn, @NonNull MaterialButton btnPlusOne,
       @NonNull MaterialButton btnRedMinus, @NonNull MaterialButton btnRedPlus,
       @NonNull MaterialButton btnStormMinus, @NonNull MaterialButton btnStormPlus,
       @NonNull MaterialButton btnTransform, @NonNull MaterialCardView cardFlipResult,
-      @NonNull ScrollView root, @NonNull LinearLayout sectionCreature,
-      @NonNull MaterialCardView sectionPlaneswalker, @NonNull TextView tvBlueCount,
-      @NonNull TextView tvFlipResult, @NonNull TextView tvFlipSubtitle,
-      @NonNull TextView tvGenericCount, @NonNull TextView tvInstSorcCount,
-      @NonNull TextView tvLifeTotal, @NonNull TextView tvLoyalty, @NonNull TextView tvRedCount,
-      @NonNull TextView tvSelfDamage, @NonNull TextView tvStormCount,
-      @NonNull TextView tvTotalMana) {
+      @NonNull LinearLayout layoutTransform, @NonNull FrameLayout rootFrame,
+      @NonNull LinearLayout sectionCreature, @NonNull MaterialCardView sectionPlaneswalker,
+      @NonNull TextView tvBlueCount, @NonNull TextView tvFlipResult,
+      @NonNull TextView tvFlipSubtitle, @NonNull TextView tvGenericCount,
+      @NonNull TextView tvInstSorcCount, @NonNull TextView tvLifeTotal, @NonNull TextView tvLoyalty,
+      @NonNull TextView tvRedCount, @NonNull TextView tvStormCount, @NonNull TextView tvTotalMana) {
     this.rootView = rootView;
     this.btnBlueMinus = btnBlueMinus;
     this.btnBluePlus = btnBluePlus;
@@ -156,6 +162,8 @@ public final class FragmentComboBinding implements ViewBinding {
     this.btnInstSorcPlus = btnInstSorcPlus;
     this.btnLifeMinus = btnLifeMinus;
     this.btnLifePlus = btnLifePlus;
+    this.btnLoyaltyMinus = btnLoyaltyMinus;
+    this.btnLoyaltyPlus = btnLoyaltyPlus;
     this.btnMinusEight = btnMinusEight;
     this.btnMinusTwo = btnMinusTwo;
     this.btnNewGame = btnNewGame;
@@ -167,7 +175,8 @@ public final class FragmentComboBinding implements ViewBinding {
     this.btnStormPlus = btnStormPlus;
     this.btnTransform = btnTransform;
     this.cardFlipResult = cardFlipResult;
-    this.root = root;
+    this.layoutTransform = layoutTransform;
+    this.rootFrame = rootFrame;
     this.sectionCreature = sectionCreature;
     this.sectionPlaneswalker = sectionPlaneswalker;
     this.tvBlueCount = tvBlueCount;
@@ -178,14 +187,13 @@ public final class FragmentComboBinding implements ViewBinding {
     this.tvLifeTotal = tvLifeTotal;
     this.tvLoyalty = tvLoyalty;
     this.tvRedCount = tvRedCount;
-    this.tvSelfDamage = tvSelfDamage;
     this.tvStormCount = tvStormCount;
     this.tvTotalMana = tvTotalMana;
   }
 
   @Override
   @NonNull
-  public ScrollView getRoot() {
+  public FrameLayout getRoot() {
     return rootView;
   }
 
@@ -270,6 +278,18 @@ public final class FragmentComboBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btnLoyaltyMinus;
+      MaterialButton btnLoyaltyMinus = ViewBindings.findChildViewById(rootView, id);
+      if (btnLoyaltyMinus == null) {
+        break missingId;
+      }
+
+      id = R.id.btnLoyaltyPlus;
+      MaterialButton btnLoyaltyPlus = ViewBindings.findChildViewById(rootView, id);
+      if (btnLoyaltyPlus == null) {
+        break missingId;
+      }
+
       id = R.id.btnMinusEight;
       MaterialButton btnMinusEight = ViewBindings.findChildViewById(rootView, id);
       if (btnMinusEight == null) {
@@ -336,7 +356,13 @@ public final class FragmentComboBinding implements ViewBinding {
         break missingId;
       }
 
-      ScrollView root = (ScrollView) rootView;
+      id = R.id.layoutTransform;
+      LinearLayout layoutTransform = ViewBindings.findChildViewById(rootView, id);
+      if (layoutTransform == null) {
+        break missingId;
+      }
+
+      FrameLayout rootFrame = (FrameLayout) rootView;
 
       id = R.id.sectionCreature;
       LinearLayout sectionCreature = ViewBindings.findChildViewById(rootView, id);
@@ -398,12 +424,6 @@ public final class FragmentComboBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.tvSelfDamage;
-      TextView tvSelfDamage = ViewBindings.findChildViewById(rootView, id);
-      if (tvSelfDamage == null) {
-        break missingId;
-      }
-
       id = R.id.tvStormCount;
       TextView tvStormCount = ViewBindings.findChildViewById(rootView, id);
       if (tvStormCount == null) {
@@ -416,13 +436,14 @@ public final class FragmentComboBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentComboBinding((ScrollView) rootView, btnBlueMinus, btnBluePlus,
+      return new FragmentComboBinding((FrameLayout) rootView, btnBlueMinus, btnBluePlus,
           btnCastSpell, btnFlipBack, btnGenericMinus, btnGenericPlus, btnInstSorcMinus,
-          btnInstSorcPlus, btnLifeMinus, btnLifePlus, btnMinusEight, btnMinusTwo, btnNewGame,
-          btnNewTurn, btnPlusOne, btnRedMinus, btnRedPlus, btnStormMinus, btnStormPlus,
-          btnTransform, cardFlipResult, root, sectionCreature, sectionPlaneswalker, tvBlueCount,
-          tvFlipResult, tvFlipSubtitle, tvGenericCount, tvInstSorcCount, tvLifeTotal, tvLoyalty,
-          tvRedCount, tvSelfDamage, tvStormCount, tvTotalMana);
+          btnInstSorcPlus, btnLifeMinus, btnLifePlus, btnLoyaltyMinus, btnLoyaltyPlus,
+          btnMinusEight, btnMinusTwo, btnNewGame, btnNewTurn, btnPlusOne, btnRedMinus, btnRedPlus,
+          btnStormMinus, btnStormPlus, btnTransform, cardFlipResult, layoutTransform, rootFrame,
+          sectionCreature, sectionPlaneswalker, tvBlueCount, tvFlipResult, tvFlipSubtitle,
+          tvGenericCount, tvInstSorcCount, tvLifeTotal, tvLoyalty, tvRedCount, tvStormCount,
+          tvTotalMana);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
