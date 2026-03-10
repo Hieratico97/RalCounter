@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ral Counter</string>
+
+    <!-- Bottom nav tabs -->
+    <string name="tab_combo">Combo</string>
+    <string name="tab_flips">Flips</string>
+
+    <!-- Setup -->
+    <string name="setup_title">Choose Game Mode</string>
+    <string name="setup_commander">COMMANDER\n(40 Life)</string>
+    <string name="setup_normal">NORMAL\n(20 Life)</string>
+
+    <!-- Ral states -->
+    <string name="state_monsoon_mage">Ral, Monsoon Mage</string>
+    <string name="state_leyline_prodigy">Ral, Leyline Prodigy</string>
+    <string name="state_subtitle_creature">Legendary Creature — Human Wizard</string>
+    <string name="state_subtitle_planeswalker">Legendary Planeswalker — Ral</string>
+
+    <!-- Spell counters -->
+    <string name="storm_count_label">⚡ STORM</string>
+    <string name="storm_count_hint">All spells this turn</string>
+    <string name="inst_sorc_label">✦ INST/SORC</string>
+    <string name="inst_sorc_hint">For Ral\'s loyalty</string>
+    <string name="other_spell_btn">+1 Other spell</string>
+
+    <!-- Coin flip buttons -->
+    <string name="cast_spell">⚡ FLIP COIN</string>
+    <string name="flip_win">⚡ HEADS!</string>
+    <string name="flip_lose">💀 TAILS</string>
+    <string name="flip_win_sub">You may transform Ral</string>
+    <string name="flip_lose_sub">Ral deals 1 damage to you</string>
+    <string name="transform_ral">✨ TRANSFORM RAL</string>
+
+    <!-- Planeswalker abilities -->
+    <string name="loyalty_label">LOYALTY</string>
+    <string name="ability_plus_one">+1</string>
+    <string name="ability_minus_two">−2</string>
+    <string name="ability_minus_eight">−8</string>
+    <string name="ability_plus_desc">Sorceries cost {1} less</string>
+    <string name="ability_minus2_desc">Deal 2. Draw if you control blue</string>
+    <string name="ability_minus8_desc">Exile 8. Cast for free this turn</string>
+
+    <!-- Self damage -->
+    <string name="self_damage_label">💀 DAMAGE TAKEN:</string>
+
+    <!-- Life total -->
+    <string name="life_total_label">❤️ LIFE</string>
+
+    <!-- Mana pool -->
+    <string name="mana_pool_label">💧 FLOATING MANA</string>
+    <string name="mana_blue">Blue</string>
+    <string name="mana_red">Red</string>
+    <string name="mana_generic">Generic</string>
+    <string name="spend_all">Spend</string>
+    <string name="mana_total_label">TOTAL: </string>
+
+    <!-- Flip log -->
+    <string name="flip_log_title">Flips</string>
+    <string name="no_flips_yet">No coins flipped yet.\nFlip an instant or sorcery to begin.</string>
+    <string name="clear_history">Clear history</string>
+    <string name="stat_wins">Heads</string>
+    <string name="stat_losses">Tails</string>
+    <string name="stat_total">Total</string>
+    <string name="stat_win_rate">Win %</string>
+
+    <!-- Actions -->
+    <string name="new_turn">New turn</string>
+    <string name="new_game">NEW GAME</string>
+    
+    <string name="lang_es">Español</string>
+    <string name="lang_en">English</string>
+    <string name="new_game_confirm_title">New Game?</string>
+    <string name="new_game_confirm_msg">Are you sure you want to start a new game? Current progress will be lost.</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
+    <string name="back_to_reset">Press back again to reset game</string>
+</resources>

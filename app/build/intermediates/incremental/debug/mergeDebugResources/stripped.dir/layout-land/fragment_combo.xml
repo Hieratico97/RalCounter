@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootFrame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_creature">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        android:padding="8dp">
+
+        <!-- Fixed Top Spacer -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone" />
+            
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginEnd="8dp">
+
+
+        <!-- ═══════════════════════════════════════════
+             LIFE TOTAL
+        ═══════════════════════════════════════════ -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            app:cardBackgroundColor="#2A0505"
+            app:cardCornerRadius="14dp"
+            app:strokeColor="@color/izzet_red"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="8dp"
+                android:paddingHorizontal="24dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/life_total_label"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.05"
+                    android:textAllCaps="true" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnLifeMinus"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:text="−"
+                    android:textSize="36sp"
+                    android:padding="0dp"
+                    app:backgroundTint="@color/izzet_red"
+                    app:cornerRadius="34dp" />
+
+                <TextView
+                    android:id="@+id/tvLifeTotal"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="40"
+                    android:textColor="@color/white"
+                    android:textSize="92sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:lineSpacingMultiplier="0.9" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnLifePlus"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:text="+"
+                    android:textSize="36sp"
+                    android:padding="0dp"
+                    app:backgroundTint="@color/izzet_red"
+                    app:cornerRadius="34dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ═══════════════════════════════════════════
+             MANA POOL (integrated in same tab)
+        ═══════════════════════════════════════════ -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="@color/planeswalker_card_bg"
+            app:cardCornerRadius="14dp"
+            app:strokeColor="@color/lightning_cyan"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+                    
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true"
+                        android:text="@string/mana_pool_label"
+                        android:textColor="@color/lightning_cyan"
+                        android:textSize="11sp"
+                        android:textAllCaps="true"
+                        android:letterSpacing="0.1" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mana_total_label"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="11sp"
+                            android:layout_marginEnd="6dp" />
+
+                        <TextView
+                            android:id="@+id/tvTotalMana"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/gold_bright"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <!-- 3 Columns for compact Mana UI -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false">
+
+                    <!-- Blue -->
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                        <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/ic_mana_blue" />
+                        <TextView android:id="@+id/tvBlueCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textColor="@color/white" android:textSize="32sp" android:textStyle="bold" android:layout_marginVertical="4dp" />
+                        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
+                            <com.google.android.material.button.MaterialButton android:id="@+id/btnBlueMinus" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="56dp" android:layout_height="56dp" android:text="−" android:textSize="26sp" android:padding="0dp" app:backgroundTint="@color/mana_blue" app:cornerRadius="28dp" />
+                            <View android:layout_width="4dp" android:layout_height="1dp" />
+                            <com.google.android.material.button.MaterialButton android:id="@+id/btnBluePlus" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="56dp" android:layout_height="56dp" android:text="+" android:textSize="26sp" android:padding="0dp" app:backgroundTint="@color/mana_blue" app:cornerRadius="28dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Red -->
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                        <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/ic_mana_red" />
+                        <TextView android:id="@+id/tvRedCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textColor="@color/white" android:textSize="32sp" android:textStyle="bold" android:layout_marginVertical="4dp" />
+                        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
+                            <com.google.android.material.button.MaterialButton android:id="@+id/btnRedMinus" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="56dp" android:layout_height="56dp" android:text="−" android:textSize="26sp" android:padding="0dp" app:backgroundTint="@color/mana_red" app:cornerRadius="28dp" />
+                            <View android:layout_width="4dp" android:layout_height="1dp" />
+                            <com.google.android.material.button.MaterialButton android:id="@+id/btnRedPlus" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="56dp" android:layout_height="56dp" android:text="+" android:textSize="26sp" android:padding="0dp" app:backgroundTint="@color/mana_red" app:cornerRadius="28dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Generic -->
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                        <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/ic_mana_generic" />
+                        <TextView android:id="@+id/tvGenericCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textColor="@color/white" android:textSize="32sp" android:textStyle="bold" android:layout_marginVertical="4dp" />
+                        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
+                            <com.google.android.material.button.MaterialButton android:id="@+id/btnGenericMinus" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="56dp" android:layout_height="56dp" android:text="−" android:textSize="26sp" android:padding="0dp" app:backgroundTint="@color/mana_generic" app:cornerRadius="28dp" />
+                            <View android:layout_width="4dp" android:layout_height="1dp" />
+                            <com.google.android.material.button.MaterialButton android:id="@+id/btnGenericPlus" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="56dp" android:layout_height="56dp" android:text="+" android:textSize="26sp" android:padding="0dp" app:backgroundTint="@color/mana_generic" app:cornerRadius="28dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="8dp">
+
+
+
+        <!-- ═══════════════════════════════════════════
+             SPELL COUNTERS ROW (Storm + Inst/Sorc)
+        ═══════════════════════════════════════════ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="6dp">
+
+            <!-- Storm counter -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="5dp"
+                app:cardBackgroundColor="#1A0A00"
+                app:cardCornerRadius="14dp"
+                app:strokeColor="#FF6000"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/storm_count_label"
+                        android:textColor="#FF6000"
+                        android:textSize="10sp"
+                        android:textAllCaps="true"
+                        android:letterSpacing="0.08" />
+
+                    <TextView
+                        android:id="@+id/tvStormCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="42sp"
+                        android:textStyle="bold"
+                        android:lineSpacingMultiplier="0.9" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/storm_count_hint"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="9sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginTop="6dp">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnStormMinus"
+                            style="@style/Widget.Material3.Button.TonalButton"
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
+                            android:text="−"
+                            android:textSize="26sp"
+                            android:padding="0dp"
+                            app:backgroundTint="#FF6000"
+                            app:cornerRadius="26dp" />
+
+                        <View android:layout_width="12dp" android:layout_height="1dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnStormPlus"
+                            style="@style/Widget.Material3.Button.TonalButton"
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
+                            android:text="+"
+                            android:textSize="26sp"
+                            android:padding="0dp"
+                            app:backgroundTint="#FF6000"
+                            app:cornerRadius="26dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Instant/Sorcery counter -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="5dp"
+                app:cardBackgroundColor="#000D1A"
+                app:cardCornerRadius="14dp"
+                app:strokeColor="@color/lightning_cyan"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/inst_sorc_label"
+                        android:textColor="@color/lightning_cyan"
+                        android:textSize="10sp"
+                        android:textAllCaps="true"
+                        android:letterSpacing="0.08" />
+
+                    <TextView
+                        android:id="@+id/tvInstSorcCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="42sp"
+                        android:textStyle="bold"
+                        android:lineSpacingMultiplier="0.9" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/inst_sorc_hint"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="9sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginTop="6dp">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnInstSorcMinus"
+                            style="@style/Widget.Material3.Button.TonalButton"
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
+                            android:text="−"
+                            android:textSize="26sp"
+                            android:padding="0dp"
+                            app:backgroundTint="@color/lightning_cyan"
+                            app:cornerRadius="26dp" />
+
+                        <View android:layout_width="12dp" android:layout_height="1dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnInstSorcPlus"
+                            style="@style/Widget.Material3.Button.TonalButton"
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
+                            android:text="+"
+                            android:textSize="26sp"
+                            android:padding="0dp"
+                            app:backgroundTint="@color/lightning_cyan"
+                            app:cornerRadius="26dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <!-- ═══════════════════════════════════════════
+             CRIATURA SECTION (visible only when MONSOON_MAGE)
+        ═══════════════════════════════════════════ -->
+        <LinearLayout
+            android:id="@+id/sectionCreature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp">
+
+            <!-- Coin flip button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCastSpell"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:text="@string/cast_spell"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.05"
+                app:backgroundTint="@color/izzet_red"
+                app:cornerRadius="12dp"
+                app:elevation="2dp" />
+
+            <!-- Flip result card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardFlipResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/creature_card_bg"
+                app:cardCornerRadius="12dp"
+                app:strokeWidth="2dp"
+                app:strokeColor="@color/gold">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="12dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvFlipResult"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="⚡ ¡CARA!"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/win_color" />
+
+                        <TextView
+                            android:id="@+id/tvFlipSubtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/flip_win_sub"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutTransform"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginStart="12dp"
+                        android:visibility="gone">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnTransform"
+                            style="@style/Widget.Material3.Button.TonalButton"
+                            android:layout_width="72dp"
+                            android:layout_height="72dp"
+                            android:padding="2dp"
+                            android:insetLeft="0dp"
+                            android:insetTop="0dp"
+                            android:insetRight="0dp"
+                            android:insetBottom="0dp"
+                            android:text="TRANSFORM!"
+                            android:textSize="8sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            app:backgroundTint="@color/lightning_cyan"
+                            app:cornerRadius="12dp"
+                            app:icon="@drawable/ic_flip_arrow"
+                            app:iconGravity="textTop"
+                            app:iconPadding="0dp"
+                            app:iconSize="28dp"
+                            app:iconTint="@color/black" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </LinearLayout>
+
+        <!-- ═══════════════════════════════════════════
+             PLANESWALKER SECTION (visible only when LEYLINE_PRODIGY)
+        ═══════════════════════════════════════════ -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/sectionPlaneswalker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/planeswalker_card_bg"
+            app:cardCornerRadius="14dp"
+            app:strokeColor="@color/lightning_cyan"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <!-- Loyalty row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/loyalty_label"
+                            android:textColor="@color/lightning_cyan"
+                            android:textSize="11sp"
+                            android:textAllCaps="true"
+                            android:letterSpacing="0.1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="4dp">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnLoyaltyMinus"
+                                style="@style/Widget.Material3.Button.TonalButton"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:text="−"
+                                android:textSize="24sp"
+                                android:padding="0dp"
+                                app:backgroundTint="@color/mana_red"
+                                app:cornerRadius="24dp" />
+
+                            <TextView
+                                android:id="@+id/tvLoyalty"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:text="2"
+                                android:textColor="@color/white"
+                                android:textSize="56sp"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:lineSpacingMultiplier="0.85" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnLoyaltyPlus"
+                                style="@style/Widget.Material3.Button.TonalButton"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:text="+"
+                                android:textSize="24sp"
+                                android:padding="0dp"
+                                app:backgroundTint="@color/mana_blue"
+                                app:cornerRadius="24dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Flip back button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnFlipBack"
+                        style="@style/Widget.Material3.Button.IconButton"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        app:icon="@drawable/ic_flip_arrow"
+                        app:iconSize="28dp"
+                        app:iconTint="@color/gold"
+                        app:backgroundTint="#2A1B02"
+                        app:strokeColor="@color/gold"
+                        app:strokeWidth="1dp"
+                        app:cornerRadius="24dp" />
+                </LinearLayout>
+
+                <!-- Loyalty ability buttons -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnPlusOne"
+                        android:layout_width="0dp"
+                        android:layout_height="52dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="4dp"
+                        android:text="+1"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:backgroundTint="@color/lightning_cyan"
+                        app:cornerRadius="10dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnMinusTwo"
+                        android:layout_width="0dp"
+                        android:layout_height="52dp"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="4dp"
+                        android:text="−2"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:backgroundTint="@color/izzet_red"
+                        app:cornerRadius="10dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnMinusEight"
+                        android:layout_width="0dp"
+                        android:layout_height="52dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="4dp"
+                        android:text="−8"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:backgroundTint="#6A0DAD"
+                        app:cornerRadius="10dp" />
+                </LinearLayout>
+
+                <!-- Ability descriptions -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="4dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="4dp"
+                        android:text="@string/ability_plus_desc"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="9sp"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="4dp"
+                        android:text="@string/ability_minus2_desc"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="9sp"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="4dp"
+                        android:text="@string/ability_minus8_desc"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="9sp"
+                        android:gravity="center" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ═══════════════════════════════════════════
+             ACTION BUTTONS
+        ═══════════════════════════════════════════ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnNewTurn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="@string/new_turn"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:backgroundTint="#1C2830"
+                app:strokeColor="@color/gold"
+                app:strokeWidth="1dp"
+                app:cornerRadius="12dp" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNewGame"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/new_game"
+            android:textColor="@color/izzet_red"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:strokeColor="@color/izzet_red"
+            app:strokeWidth="1.5dp"
+            app:cornerRadius="12dp"
+            android:letterSpacing="0.1" />
+
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+</FrameLayout>

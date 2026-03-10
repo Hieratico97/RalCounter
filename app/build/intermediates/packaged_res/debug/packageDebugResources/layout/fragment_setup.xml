@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Image -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_setup"
+        android:scaleType="centerCrop" />
+        
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66000000" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <Space 
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RAL COUNTER"
+            android:textColor="@color/gold_bright"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/setup_title"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginBottom="48dp" />
+
+        <!-- Commander Mode -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCommanderMode"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="@string/setup_commander"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:backgroundTint="#B32A0505"
+            app:strokeColor="@color/izzet_red"
+            app:strokeWidth="2dp"
+            app:cornerRadius="16dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Normal Mode -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNormalMode"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="@string/setup_normal"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:backgroundTint="#B3000D1A"
+            app:strokeColor="@color/lightning_cyan"
+            app:strokeWidth="2dp"
+            app:cornerRadius="16dp" />
+
+        <Space 
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="#991A0A00"
+            android:padding="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLangEn"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lang_en"
+                android:textColor="@color/gold"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" | "
+                android:textColor="@color/text_secondary" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLangEs"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lang_es"
+                android:textColor="@color/gold"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

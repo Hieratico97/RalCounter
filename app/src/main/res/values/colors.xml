@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ── Izzet core palette ── -->
+    <color name="izzet_red">#C0392B</color>
+    <color name="izzet_blue">#1565C0</color>
+    <color name="lightning_cyan">#00E5FF</color>
+    <color name="gold">#D4A017</color>
+    <color name="gold_bright">#FFD700</color>
+
+    <!-- ── Background colors ── -->
+    <color name="ic_launcher_background">#091C3C</color>
+    <color name="bg_creature">#110500</color>
+    <color name="bg_planeswalker">#000D1E</color>
+
+    <!-- ── Card backgrounds ── -->
+    <color name="creature_card_bg">#1A0A00</color>
+    <color name="planeswalker_card_bg">#00091A</color>
+
+    <!-- ── Text colors ── -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#9E9E9E</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- ── Flip result colors ── -->
+    <color name="win_color">#00E676</color>
+    <color name="lose_color">#FF5252</color>
+
+    <!-- ── MTG Mana colors ── -->
+    <color name="mana_blue">#5AABDD</color>
+    <color name="mana_red">#E05050</color>
+    <color name="mana_generic">#8A8080</color>
+    <color name="mana_green">#5DAD5C</color>
+    <color name="mana_white">#F8F0E0</color>
+    <color name="mana_black">#6A5ACD</color>
+
+    <!-- ── Navigation ── -->
+    <color name="nav_selected">#D4A017</color>
+    <color name="nav_unselected">#666666</color>
+    <color name="nav_background">#0A0A0A</color>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/comboFragment"
+        android:icon="@drawable/ic_lightning"
+        android:title="@string/tab_combo" />
+    <item
+        android:id="@+id/flipLogFragment"
+        android:icon="@drawable/ic_coin"
+        android:title="@string/tab_flips" />
+</menu>

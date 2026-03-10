@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_radius">16dp</dimen>
+    <dimen name="card_elevation">8dp</dimen>
+    <dimen name="section_margin">16dp</dimen>
+    <dimen name="content_padding">20dp</dimen>
+    <dimen name="counter_size">72sp</dimen>
+    <dimen name="loyalty_size">80sp</dimen>
+</resources>

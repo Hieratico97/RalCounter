@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="40dp"
+    android:height="40dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+    <!-- Blue circle background -->
+    <path android:fillColor="#5AABDD" android:pathData="M50,50m-50,0a50,50 0 1,0 100,0a50,50 0 1,0 -100,0"/>
+    <!-- Water drop main body -->
+    <path android:fillColor="#1A1A1A"
+        android:pathData="M50,15 C50,15 25,45 25,60 C25,73.8 36.2,85 50,85 C63.8,85 75,73.8 75,60 C75,45 50,15 50,15Z"/>
+    <!-- Inner highlight drop -->
+    <path android:fillColor="#5AABDD"
+        android:pathData="M55,55 C55,55 45,60 45,67 C45,72 49,75 53,73 C57,71 59,66 57,61 C56,58 55,55 55,55Z"/>
+</vector>

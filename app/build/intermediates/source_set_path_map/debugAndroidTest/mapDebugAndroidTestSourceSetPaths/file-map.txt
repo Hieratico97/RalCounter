@@ -1,0 +1,5 @@
+com.monsoonmage.ralcounter.test.app-androidTest-0 C:\Users\MSI\Documents\GitHub\RalCounter\app\build\generated\res\resValues\androidTest\debug
+com.monsoonmage.ralcounter.test.app-updated_navigation_xml-1 C:\Users\MSI\Documents\GitHub\RalCounter\app\build\generated\updated_navigation_xml\debugAndroidTest
+com.monsoonmage.ralcounter.test.app-mergeDebugAndroidTestResources-2 C:\Users\MSI\Documents\GitHub\RalCounter\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.monsoonmage.ralcounter.test.app-mergeDebugAndroidTestResources-3 C:\Users\MSI\Documents\GitHub\RalCounter\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.monsoonmage.ralcounter.test.app-debugAndroidTest-4 C:\Users\MSI\Documents\GitHub\RalCounter\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

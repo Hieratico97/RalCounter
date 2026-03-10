@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-mergeDebugResources-48:\\layout\\fragment_combo.xml",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-51:\\layout\\fragment_combo.xml"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-mergeDebugResources-48:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-51:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-mergeDebugResources-48:\\layout\\fragment_setup.xml",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-51:\\layout\\fragment_setup.xml"
+    },
+    {
+        "merged": "com.monsoonmage.ralcounter.app-mergeDebugResources-48:/layout/fragment_combo.xml",
+        "source": "com.monsoonmage.ralcounter.app-main-51:/layout/fragment_combo.xml"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-mergeDebugResources-48:\\layout\\fragment_flip_log.xml",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-51:\\layout\\fragment_flip_log.xml"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-mergeDebugResources-48:\\layout\\item_flip_result.xml",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-51:\\layout\\item_flip_result.xml"
+    }
+]

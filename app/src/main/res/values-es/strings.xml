@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ral Counter</string>
+
+    <!-- Bottom nav tabs -->
+    <string name="tab_combo">Combo</string>
+    <string name="tab_flips">Lanzamientos</string>
+
+    <!-- Setup -->
+    <string name="setup_title">Elige el modo de juego</string>
+    <string name="setup_commander">COMMANDER\n(40 Vidas)</string>
+    <string name="setup_normal">NORMAL\n(20 Vidas)</string>
+
+    <!-- Ral states -->
+    <string name="state_monsoon_mage">Ral, Mago Monzón</string>
+    <string name="state_leyline_prodigy">Ral, Prodigio de las Líneas</string>
+    <string name="state_subtitle_creature">Criatura Legendaria — Humano Mago</string>
+    <string name="state_subtitle_planeswalker">Planeswalker Legendario — Ral</string>
+
+    <!-- Spell counters -->
+    <string name="storm_count_label">⚡ TORMENTA</string>
+    <string name="storm_count_hint">Todos los hechizos este turno</string>
+    <string name="inst_sorc_label">✦ INST/CONJ</string>
+    <string name="inst_sorc_hint">Para la lealtad de Ral</string>
+    <string name="other_spell_btn">+1 Otro hechizo</string>
+
+    <!-- Coin flip buttons -->
+    <string name="cast_spell">⚡ LANZAR MONEDA</string>
+    <string name="flip_win">⚡ ¡CARA!</string>
+    <string name="flip_lose">💀 CRUZ</string>
+    <string name="flip_win_sub">Puedes transformar a Ral</string>
+    <string name="flip_lose_sub">Ral te inflige 1 daño</string>
+    <string name="transform_ral">✨ TRANSFORMAR RAL</string>
+
+    <!-- Planeswalker abilities -->
+    <string name="loyalty_label">LEALTAD</string>
+    <string name="ability_plus_one">+1</string>
+    <string name="ability_minus_two">−2</string>
+    <string name="ability_minus_eight">−8</string>
+    <string name="ability_plus_desc">Los conjuros cuestan {1} menos</string>
+    <string name="ability_minus2_desc">Inflige 2. Roba si controlas azul</string>
+    <string name="ability_minus8_desc">Exilia 8. Lanza gratis este turno</string>
+
+    <!-- Self damage -->
+    <string name="self_damage_label">💀 DAÑO RECIBIDO</string>
+
+    <!-- Life total -->
+    <string name="life_total_label">❤️ VIDA</string>
+
+    <!-- Mana pool -->
+    <string name="mana_pool_label">💧 MANÁ FLOTANTE</string>
+    <string name="mana_blue">Azul</string>
+    <string name="mana_red">Rojo</string>
+    <string name="mana_generic">Genérico</string>
+    <string name="spend_all">Gastar</string>
+    <string name="mana_total_label">TOTAL: </string>
+
+    <!-- Flip log -->
+    <string name="flip_log_title">Lanzamientos</string>
+    <string name="no_flips_yet">Aún no has lanzado ninguna moneda.\nLanza un instante o conjuro para empezar.</string>
+    <string name="clear_history">Borrar historial</string>
+    <string name="stat_wins">Cara</string>
+    <string name="stat_losses">Cruz</string>
+    <string name="stat_total">Total</string>
+    <string name="stat_win_rate">% Éxito</string>
+
+    <!-- Actions -->
+    <string name="new_turn">Nuevo turno</string>
+    <string name="new_game">NUEVA PARTIDA</string>
+    
+    <string name="lang_es">Español</string>
+    <string name="lang_en">English</string>
+    <string name="new_game_confirm_title">¿Nueva partida?</string>
+    <string name="new_game_confirm_msg">¿Estás seguro de que quieres empezar una nueva partida? Se perderán los contadores actuales.</string>
+    <string name="cancel">Cancelar</string>
+    <string name="confirm">Confirmar</string>
+    <string name="back_to_reset">Pulsa atrás de nuevo para reiniciar la partida</string>
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.RalCounter" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/izzet_red</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSurface">@color/creature_card_bg</item>
+        <item name="android:windowBackground">@color/bg_creature</item>
+        <item name="android:statusBarColor">#000000</item>
+        <item name="android:navigationBarColor">@color/nav_background</item>
+    </style>
+
+    <!-- Base Ral text appearance -->
+    <style name="TextAppearance.Ral" parent="TextAppearance.Material3.BodyMedium" />
+
+    <!-- Big number counter -->
+    <style name="TextAppearance.Ral.Counter">
+        <item name="android:textSize">72sp</item>
+        <item name="android:textColor">@color/gold_bright</item>
+        <item name="android:fontFamily">sans-serif-condensed-medium</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Section headers -->
+    <style name="TextAppearance.Ral.SectionHeader">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.15</item>
+    </style>
+
+    <!-- State banner name -->
+    <style name="TextAppearance.Ral.StateName">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/gold</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Ability buttons (+1, -2, -8) -->
+    <style name="Widget.Ral.AbilityButton" parent="Widget.Material3.Button">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingHorizontal">20dp</item>
+        <item name="android:paddingVertical">14dp</item>
+        <item name="cornerRadius">12dp</item>
+    </style>
+
+    <!-- Counter +/- buttons -->
+    <style name="Widget.Ral.CounterButton" parent="Widget.Material3.Button.TonalButton">
+        <item name="android:textSize">26sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:minWidth">56dp</item>
+        <item name="android:minHeight">56dp</item>
+        <item name="cornerRadius">28dp</item>
+    </style>
+
+    <!-- Primary action button -->
+    <style name="Widget.Ral.PrimaryButton" parent="Widget.Material3.Button">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.08</item>
+        <item name="android:paddingHorizontal">24dp</item>
+        <item name="android:paddingVertical">16dp</item>
+        <item name="cornerRadius">14dp</item>
+    </style>
+
+    <style name="Theme.RalCounter.Dialog" parent="Theme.Material3.Dark.Dialog.Alert">
+        <item name="colorSurface">@color/creature_card_bg</item>
+    </style>
+</resources>

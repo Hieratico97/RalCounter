@@ -1,0 +1,154 @@
+[
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-release-49:\\layout_fragment_setup.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-50:\\layout\\fragment_setup.xml"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-release-49:\\mipmap-anydpi-v26_ic_ral3_round.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-50:\\mipmap-anydpi-v26\\ic_ral3_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-release-49:\\drawable_bg_card_planeswalker.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-50:\\drawable\\bg_card_planeswalker.xml"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-release-49:\\drawable_ic_flip_arrow.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-50:\\drawable\\ic_flip_arrow.xml"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-release-49:\\drawable_ic_mana_blue.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-50:\\drawable\\ic_mana_blue.xml"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-release-49:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-50:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-release-49:\\mipmap-hdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-50:\\mipmap-hdpi\\ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-release-49:\\drawable_bg_setup.png.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-50:\\drawable\\bg_setup.png"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-release-49:\\drawable_ic_mana.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-50:\\drawable\\ic_mana.xml"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-release-49:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-50:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-release-49:\\menu_bottom_nav_menu.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-50:\\menu\\bottom_nav_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-release-49:\\color_nav_item_selector.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-50:\\color\\nav_item_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-release-49:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-50:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-release-49:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-50:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-release-49:\\drawable_ic_coin.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-50:\\drawable\\ic_coin.xml"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-release-49:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-50:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-release-49:\\layout_fragment_combo.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-50:\\layout\\fragment_combo.xml"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-release-49:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-50:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-release-49:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-50:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-release-49:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-50:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-release-49:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-50:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-release-49:\\mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-50:\\mipmap-xxhdpi\\ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-release-49:\\mipmap-anydpi-v26_ic_ral3.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-50:\\mipmap-anydpi-v26\\ic_ral3.xml"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-release-49:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-50:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-release-49:\\drawable_bg_card_creature.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-50:\\drawable\\bg_card_creature.xml"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-release-49:\\drawable_ic_lightning.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-50:\\drawable\\ic_lightning.xml"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-release-49:\\mipmap-mdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-50:\\mipmap-mdpi\\ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-release-49:\\layout_fragment_flip_log.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-50:\\layout\\fragment_flip_log.xml"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-release-49:\\drawable_ic_mana_generic.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-50:\\drawable\\ic_mana_generic.xml"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-release-49:\\layout_item_flip_result.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-50:\\layout\\item_flip_result.xml"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-release-49:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-50:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-release-49:\\mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-50:\\mipmap-xxxhdpi\\ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-release-49:\\drawable_ic_mana_red.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-50:\\drawable\\ic_mana_red.xml"
+    },
+    {
+        "merged": "com.monsoonmage.ralcounter.app-release-49:/layout_fragment_combo.xml.flat",
+        "source": "com.monsoonmage.ralcounter.app-main-50:/layout/fragment_combo.xml"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-release-49:\\mipmap-xhdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-50:\\mipmap-xhdpi\\ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-release-49:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-50:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-release-49:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-50:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-release-49:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.13\\com.monsoonmage.ralcounter.app-main-50:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    }
+]
