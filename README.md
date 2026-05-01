@@ -1,8 +1,8 @@
 # RalCounter (Ral, Monsoon Mage)
 
-RalCounter is a specialized Android companion app designed for Magic: The Gathering players who pilot decks featuring **Ral, Monsoon Mage** / **Ral, Leyline Prodigy**.
+RalCounter is an advanced Android utility application engineered specifically for *Magic: The Gathering* players utilizing **Ral, Monsoon Mage** / **Ral, Leyline Prodigy** mechanics. 
 
-This utility streamlines the complex board states and interactions involved in Storm and Coin-Flip strategies, taking the mental math out of tracking your explosive turns!
+This application provides a comprehensive suite of tools designed to accurately track complex board states, manage probabilistic events (coin flips), and calculate cumulative interactions such as Storm count and spell sequencing, thereby optimizing gameplay efficiency and precision.
 
 ## 🌟 Key Features
 
@@ -46,7 +46,7 @@ This utility streamlines the complex board states and interactions involved in S
 
 To build and run the project locally:
 
-1. Clone the repository: `git clone https://github.com/your-username/RalCounter.git`
+1. Clone the repository: `git clone https://github.com/Hieratico97/RalCounter.git`
 2. Open the project in **Android Studio**.
 3. Let Gradle sync and resolve all dependencies.
 4. Build and run the app on an emulator or physical device via the Run button.
@@ -54,7 +54,7 @@ To build and run the project locally:
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome! 
-Feel free to check out the [issues page](https://github.com/your-username/RalCounter/issues) if you want to contribute.
+Feel free to check out the [issues page](https://github.com/Hieratico97/RalCounter/issues) if you want to contribute.
 
 ## 📄 License
 
